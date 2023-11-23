@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/AdventCalendar.css";
 
 const AdventCalendar = () => {
   const [openedDoors, setOpenedDoors] = useState([]);
