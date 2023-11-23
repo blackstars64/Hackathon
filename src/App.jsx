@@ -4,11 +4,11 @@ import "./css/app.css";
 
 const App = () => {
   const data = useLoaderData();
-  console.log(data);
+
   return (
     <div className="app">
       <h1>Calendrier de lAvent</h1>
-      <AdventCalendar />
+      <AdventCalendar data={data} />
     </div>
   );
 };
