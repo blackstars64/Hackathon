@@ -33,9 +33,11 @@ function Cadeaux() {
   }
 
   return (
-    <div className="cadeau-container">
-      {isConfettiActive && <Confetti />}
-      <img className="cadeau-image" src={dataCadeaux[0].img} alt="" />
+    <div className="screen">
+      <div className="cadeau-container">
+        {isConfettiActive && <Confetti />}
+        <img className="cadeau-image" src={dataCadeaux[0].img} alt="" />
+      </div>
     </div>
   );
 }

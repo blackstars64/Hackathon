@@ -1,3 +1,18 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
 body {
   margin: 0;
   padding: 0;
