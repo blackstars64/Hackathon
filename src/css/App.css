@@ -15,7 +15,6 @@ body {
   text-align: center;
   color: #ffd700;
 }
-
 .advent-calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -78,3 +77,4 @@ body {
 .opened {
   background-color: #bada55;
 }
+
