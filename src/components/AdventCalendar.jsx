@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../css/AdventCalendar.css";
 import { Link } from "react-router-dom";
 
-const AdventCalendar = () => {
+const AdventCalendar = ({ data }) => {
   const [openedDoors, setOpenedDoors] = useState([]);
 
   const handleDoorClick = (doorNumber) => {
@@ -18,9 +18,11 @@ const AdventCalendar = () => {
     for (let i = 1; i <= totalDoors; i++) {
       const isDoorOpened = openedDoors.includes(i);
 
+      const imgData = data.filter((img) => img.id === i.toString());
+
       const doorStyle = isDoorOpened
         ? {
-            backgroundImage: "url('../assets/images/advent-4623521_640.png')",
+            backgroundImage: `url(${imgData[0].objetimg})`,
           }
         : {};
 

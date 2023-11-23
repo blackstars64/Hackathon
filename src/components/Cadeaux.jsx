@@ -7,7 +7,7 @@ function Cadeaux() {
   {
     // dataCadeaux[0].img
   }
-  return <img src="../../src/assets/images/caca.png" alt="" />;
+  return <img src={dataCadeaux[0].img} alt="" />;
 }
 
 export default Cadeaux;
