@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 export const CalenderLoader = async () => {
-  const reponse = await fetch("../../src/assets/datas.json", {
+  const reponse = await fetch("../../src/datas/cadeaux.json", {
     method: "GET",
   });
   const data = await reponse.json();
