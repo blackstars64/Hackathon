@@ -1,13 +1,13 @@
-import "./css/App.css";
+import AdventCalendar from "./components/AdventCalendar";
+import "./css/app.css";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
-      <header>
-        <h1>bien bien</h1>
-      </header>
+      <h1>Calendrier de lAvent</h1>
+      <AdventCalendar />
     </div>
   );
-}
+};
 
 export default App;
