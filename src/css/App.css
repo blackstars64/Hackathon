@@ -3,15 +3,78 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-image: url("../assets/images/moon-31665_1280.png");
-  background-repeat: no-repeat; /* Empêche la répétition du fond d'écran */
-  background-size: cover; /* Couvre tout le fond d'écran */
-  min-height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centre le contenu horizontalement */
+  justify-content: center;
 }
 
 .app {
   text-align: center;
   color: #ffd700;
 }
+.advent-calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: -450px;
+  padding: 20px;
+}
+
+.door {
+  font-size: 15px;
+  border: 1px solid #f4ef6e;
+  border-radius: 20px;
+  box-shadow: inset 3px 3px 11px 2px black;
+  padding: 10px;
+  cursor: pointer;
+  background-image: url(../assets/images/christmas-161316_640.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: font-size 0.3s ease;
+  height: 120px;
+  width: 120px;
+  animation: wiggle 4s linear infinite;
+}
+@keyframes wiggle {
+  0%,
+  12% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  17% {
+    transform: rotateZ(10deg);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  25% {
+    transform: rotateZ(6deg);
+  }
+  27% {
+    transform: rotateZ(-4deg);
+  }
+  30%,
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.door:hover {
+  font-size: 100px;
+  text-shadow: 10px 10px 6px #2c2828;
+}
+
+.opened {
+  background-color: #bada55;
+}
+
