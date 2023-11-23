@@ -80,7 +80,6 @@
 }
 .click {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
+  width: 127px;
+  height: 127px;
 }
