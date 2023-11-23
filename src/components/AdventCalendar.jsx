@@ -33,7 +33,11 @@ const AdventCalendar = ({ data }) => {
           style={doorStyle}
           onClick={() => handleDoorClick(i)}
         >
-          {isDoorOpened ? <Link to={`cadeaux/${i}`}> 🎁 </Link> : i}
+          {isDoorOpened ? (
+            <Link to={`cadeaux/${i}`} className="click"></Link>
+          ) : (
+            i
+          )}
         </div>
       );
     }
