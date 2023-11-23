@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/AdventCalendar.css";
+import { Link } from "react-router-dom";
 
 const AdventCalendar = () => {
   const [openedDoors, setOpenedDoors] = useState([]);
@@ -30,7 +31,7 @@ const AdventCalendar = () => {
           style={doorStyle}
           onClick={() => handleDoorClick(i)}
         >
-          {isDoorOpened ? "🎁" : i}
+          {isDoorOpened ? <Link to={`cadeaux/${i}`}> 🎁 </Link> : i}
         </div>
       );
     }
