@@ -78,3 +78,9 @@
     transform: translateZ(0) rotateY(0);
   }
 }
+.click {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+}
