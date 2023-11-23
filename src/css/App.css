@@ -1,21 +1,35 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-image: url("../assets/images/moon-31665_1280.png");
-  background-repeat: no-repeat; /* Empêche la répétition du fond d'écran */
-  background-size: cover; /* Couvre tout le fond d'écran */
-  min-height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centre le contenu horizontalement */
+  justify-content: center;
 }
 
 .app {
   text-align: center;
   color: #ffd700;
 }
-
 .advent-calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -24,25 +38,4 @@ body {
   margin: 0 auto;
   margin-left: -450px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.door {
-  border: 1px solid #ccc;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-size: cover;
-  background-color: white;
-  min-height: 120px;
-  min-width: 120px;
-  background-image: url("../assets/images/christmas-161316_640.png");
-}
-
-.door:hover {
-  background-color: #eee;
-}
-
-.opened {
-  background-color: #bada55;
 }
