@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "../css/audioplayer.css";
+import Toc_toc from "./Toc_toc";
 
 const AudioPlayer = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -29,7 +30,13 @@ const AudioPlayer = (props) => {
   return (
     <div>
       <audio ref={audioRef} src={props.audioSrc} />
-      <button className="play" onClick={togglePlay}>
+      <button
+        className="play"
+        onClick={() => {
+          togglePlay();
+          Toc_toc();
+        }}
+      >
         {isPlaying ? "Pause" : "Play"}
       </button>
     </div>

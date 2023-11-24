@@ -1,6 +1,8 @@
 import "../css/AdventCalendar.css";
 import { Link } from "react-router-dom";
 import { useLocalStorage } from "usehooks-ts";
+import Porte from "../utils/Porte";
+
 
 const AdventCalendar = ({ data }) => {
   const [openedDoors, setOpenedDoors] = useLocalStorage("doors", []);
@@ -31,7 +33,10 @@ const AdventCalendar = ({ data }) => {
           key={i}
           className={`door ${isDoorOpened ? "opened" : ""}`}
           style={doorStyle}
-          onClick={() => handleDoorClick(i)}
+          onClick={() => {
+            handleDoorClick(i);
+            Porte();
+          }}
         >
           {isDoorOpened ? (
             <Link to={`cadeaux/${i}`} className="click"></Link>
