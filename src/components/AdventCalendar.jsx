@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/AdventCalendar.css";
 import { Link } from "react-router-dom";
+import Porte from "../utils/Porte";
 
 const AdventCalendar = ({ data }) => {
   const [openedDoors, setOpenedDoors] = useState([]);
@@ -31,7 +32,10 @@ const AdventCalendar = ({ data }) => {
           key={i}
           className={`door ${isDoorOpened ? "opened" : ""}`}
           style={doorStyle}
-          onClick={() => handleDoorClick(i)}
+          onClick={() => {
+            handleDoorClick(i);
+            Porte();
+          }}
         >
           {isDoorOpened ? (
             <Link to={`cadeaux/${i}`} className="click"></Link>
