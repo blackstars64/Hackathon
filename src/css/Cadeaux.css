@@ -53,13 +53,13 @@ canvas {
 }
 @keyframes neige {
   0% {
-    top: -150px;
+    transform: translateY(-480%);
   }
   85% {
-    top: -150px;
+    transform: translateY(-480%);
   }
   100% {
-    top: 156px;
+    transform: translateY(-239%);
   }
 }
 .text-data {
