@@ -43,7 +43,6 @@ function Cadeaux() {
         {dataCadeaux[0].text}{" "}
       </p>
 
-      <p className="yeux"> 👀</p>
       <Link className="return" to="/" onClick={Rire_Nelson}>
         Retour
       </Link>
