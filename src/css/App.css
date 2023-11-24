@@ -28,7 +28,12 @@ body {
 
 .app {
   text-align: center;
-  color: #ffd700;
+}
+.title {
+  font: normal 40px/ 20px "Nixie One", Helvetica, Arial;
+  color: rgb(238, 238, 221);
+  text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+    0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
 }
 
 .pere-noel {

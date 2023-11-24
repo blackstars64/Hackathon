@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className="app">
       <AudioPlayer audioSrc={audioSource} />
-      <h1>
+      <h1 className="title">
         Calendrier de L&apos;Arrière
         <img className="pere-noel" src={pereNoel} alt="" />
       </h1>

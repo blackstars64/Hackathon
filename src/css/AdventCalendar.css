@@ -11,6 +11,7 @@
 
 .door {
   font-size: 15px;
+  color: #bada55;
   border: 1px solid #f4ef6e;
   border-radius: 20px;
   box-shadow: inset 3px 3px 11px 2px black;
@@ -55,7 +56,68 @@
 
 .door:hover {
   font-size: 100px;
-  text-shadow: 10px 10px 6px #2c2828;
+  color: rgb(238, 238, 221);
+  text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+    0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 11px 2px black;
+  animation-name: clignote;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: clignote2;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+}
+
+@keyframes clignote2 {
+  0% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  10% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  12% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  15% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  25% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  30% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  45% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .opened {
