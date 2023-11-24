@@ -3,6 +3,7 @@ import Confetti from "react-confetti";
 import { useLoaderData, useParams } from "react-router-dom";
 import "../css/Cadeaux.css";
 import { Link } from "react-router-dom";
+
 function Cadeaux() {
   const data = useLoaderData();
   const { id } = useParams();
@@ -41,7 +42,7 @@ function Cadeaux() {
       <p className={dataCadeaux[0].text !== "" ? "text-data" : "no-text"}>
         {dataCadeaux[0].text}{" "}
       </p>
-      <p className="yeux"> 👀</p>
+
       <Link className="return" to="/">
         Retour
       </Link>
