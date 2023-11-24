@@ -104,7 +104,7 @@
   animation-name: clignote;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  -webkit-animation-name: clignote; /*nom de l'animation*/
-  -webkit-animation-duration: 2s; /*durée de l'animation*/
-  -webkit-animation-iteration-count: 1; /*nombre de repétition de l'animation*/
+  -webkit-animation-name: clignote;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
 }
