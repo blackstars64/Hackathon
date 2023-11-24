@@ -8,8 +8,8 @@
 .screen::after {
   content: url(../assets/images/neige-tr.png);
   position: absolute;
-  top: 156px;
-  left: 178px;
+  transform: translateY(-239%);
+  left: 150px;
   z-index: 100;
   animation: neige 4s ease-in;
 }
