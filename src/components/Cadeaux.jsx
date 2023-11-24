@@ -3,7 +3,7 @@ import Confetti from "react-confetti";
 import { useLoaderData, useParams } from "react-router-dom";
 import "../css/Cadeaux.css";
 import { Link } from "react-router-dom";
-import rire_Nelson from "../../src/assets/songs/rire-Nelson.wav";
+import Rire_Nelson from "../utils/Rire_Nelson";
 
 function Cadeaux() {
   const data = useLoaderData();
@@ -27,12 +27,6 @@ function Cadeaux() {
     };
   }, []);
 
-
-  const jouerSon = () => {
-    const audio = new Audio(rire_Nelson);
-    audio.play();
-  };
-
   if (!dataCadeaux.length) {
     return <div>Cadeau non trouvé</div>;
   }
@@ -48,7 +42,7 @@ function Cadeaux() {
       </p>
 
       <p className="yeux"> 👀</p>
-      <Link className="return" to="/" onClick={jouerSon}>
+      <Link className="return" to="/" onClick={Rire_Nelson}>
         Retour
       </Link>
     </div>
