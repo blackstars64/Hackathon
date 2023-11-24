@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import "../css/audioplayer.css";
 
 const AudioPlayer = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,6 +16,7 @@ const AudioPlayer = (props) => {
   const play = () => {
     const audio = audioRef.current;
     audio.play();
+    audio.volume = 0.1;
     setIsPlaying(true);
   };
 
@@ -27,7 +29,9 @@ const AudioPlayer = (props) => {
   return (
     <div>
       <audio ref={audioRef} src={props.audioSrc} />
-      <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
+      <button className="play" onClick={togglePlay}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
     </div>
   );
 };

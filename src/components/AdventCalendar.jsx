@@ -1,9 +1,9 @@
-import { useState } from "react";
 import "../css/AdventCalendar.css";
 import { Link } from "react-router-dom";
+import { useLocalStorage } from "usehooks-ts";
 
 const AdventCalendar = ({ data }) => {
-  const [openedDoors, setOpenedDoors] = useState([]);
+  const [openedDoors, setOpenedDoors] = useLocalStorage("doors", []);
 
   const handleDoorClick = (doorNumber) => {
     if (!openedDoors.includes(doorNumber)) {
@@ -22,7 +22,7 @@ const AdventCalendar = ({ data }) => {
 
       const doorStyle = isDoorOpened
         ? {
-            backgroundImage: `url(${imgData[0].objetimg})`,
+            backgroundImage: `url(${imgData[0].objetimg}) `,
           }
         : {};
 
