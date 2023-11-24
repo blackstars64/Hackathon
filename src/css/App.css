@@ -3,15 +3,15 @@
   scrollbar-color: blue orange;
 }
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 *::-webkit-scrollbar-track {
-  background: orange;
+  background: #141434;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color: #141434;
   border-radius: 20px;
-  border: 3px solid orange;
+  border: 6px double #74a0d8;
 }
 body {
   margin: 0;
@@ -30,12 +30,8 @@ body {
   text-align: center;
   color: #ffd700;
 }
-.advent-calendar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 100px;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-left: -450px;
-  padding: 20px;
+
+.pere-noel {
+  width: 43px;
+  height: 43px;
 }

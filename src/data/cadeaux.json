@@ -9,7 +9,7 @@
     "id": "2",
     "img": "../../src/assets/images/bouteille-de-vin.jpg",
     "objetimg": "../../src/assets/image_objet/bouteille-de-vin.png",
-    "text": ""
+    "text": "Chaque fin d'année c'est la même..."
   },
   {
     "id": "3",
@@ -45,19 +45,19 @@
     "id": "8",
     "img": "../../src/assets/images/metre.gif",
     "objetimg": "../../src/assets/image_objet/metre.png",
-    "text": ""
+    "text": "Autant rien mètre"
   },
   {
     "id": "9",
     "img": "../../src/assets/images/os.jpg",
     "objetimg": "../../src/assets/image_objet/os.png",
-    "text": ""
+    "text": "Miam Miam bien dodue la dinde"
   },
   {
     "id": "10",
-    "img": "../../src/assets/images/pipi.pnj",
+    "img": "../../src/assets/images/pipi.png",
     "objetimg": "../../src/assets/image_objet/pipi.png",
-    "text": ""
+    "text": "Oh mon dieu des stalacbytes !"
   },
   {
     "id": "11",
@@ -69,7 +69,7 @@
     "id": "12",
     "img": "../../src/assets/images/danse.png",
     "objetimg": "../../src/assets/image_objet/danse.png",
-    "text": ""
+    "text": "Ehhh Macarenaaa"
   },
   {
     "id": "13",
