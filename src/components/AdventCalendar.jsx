@@ -22,7 +22,7 @@ const AdventCalendar = ({ data }) => {
 
       const doorStyle = isDoorOpened
         ? {
-            backgroundImage: `url(${imgData[0].objetimg})`,
+            backgroundImage: `url(${imgData[0].objetimg}) `,
           }
         : {};
 
