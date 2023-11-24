@@ -1,0 +1,150 @@
+.advent-calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 70px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: -280px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: url("../../src/assets/images/cible-cursor.svg") 14 0, auto;
+}
+
+.door {
+  font-size: 15px;
+  color: #bada55;
+  border: 1px solid #f4ef6e;
+  border-radius: 20px;
+  box-shadow: inset 3px 3px 11px 2px black;
+  padding: 10px;
+  cursor: pointer;
+  background-image: url(../assets/images/christmas-161316_640.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: font-size 0.3s ease;
+  height: 120px;
+  width: 100px;
+  animation: wiggle 4s linear infinite;
+  cursor: url("../../src/assets/images/cible-cursor.svg") 14 0, auto;
+}
+@keyframes wiggle {
+  0%,
+  12% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  17% {
+    transform: rotateZ(10deg);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  25% {
+    transform: rotateZ(6deg);
+  }
+  27% {
+    transform: rotateZ(-4deg);
+  }
+  30%,
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.door:hover {
+  font-size: 100px;
+  color: rgb(238, 238, 221);
+  text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+    0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 11px 2px black;
+  animation-name: clignote;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: clignote2;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+}
+
+@keyframes clignote2 {
+  0% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  10% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  12% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  15% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  25% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  30% {
+    box-shadow: 0px 0px 15px #eaf367, inset 0px 0px 15px #eaf367;
+    border: 2px solid #eedde0;
+    color: rgb(238, 238, 221);
+    text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+      0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  45% {
+    box-shadow: 0px 0px 15px rgba(46, 46, 46, 0.61),
+      inset 0px 0px 15px rgba(46, 46, 46, 0.61);
+    border: 2px solid rgba(46, 46, 46, 0.61);
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.opened {
+  background-color: #bada55;
+}
+.door.opened {
+  animation: slit-in-vertical 0.45s ease-out both;
+  background-size: cover;
+}
+
+@keyframes slit-in-vertical {
+  0% {
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(0) rotateY(0);
+  }
+}
+.click {
+  display: inline-block;
+  width: 127px;
+  height: 127px;
+}

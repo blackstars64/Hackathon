@@ -1,5 +1,67 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+*::-webkit-scrollbar {
+  width: 14px;
+}
+*::-webkit-scrollbar-track {
+  background: #141434;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #141434;
+  border-radius: 20px;
+  border: 6px double #74a0d8;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url("../assets/images/moon-31665_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("../../src/assets/images/cible-cursor.svg") 14 0, auto;
+}
+
+.app {
+  text-align: center;
+}
+.title {
+  font: normal 40px/ 20px "Nixie One", Helvetica, Arial;
+  color: rgb(238, 238, 221);
+  text-shadow: 0 0 30px #daec63, 0 0 10px rgba(228, 230, 161, 0.41),
+    0 0 100px #e5e6a1, 0 0 500px #eaf367, 5px 9px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pere-noel {
+  width: 43px;
+  height: 43px;
+}
+.traineau-noel {
+  position: fixed;
+  z-index: 500;
+  animation: move 30s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: translate(1100px, 1200px);
+  }
+
+  50% {
+    transform: translateX(-2000px);
+  }
+  53% {
+    transform: translate(-500px, -5000px);
+  }
+  55% {
+    transform: translate(1200px, -150px);
+  }
+
+  100% {
+    transform: translate(-1200px, 467px);
+  }
 }
