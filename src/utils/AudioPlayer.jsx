@@ -19,7 +19,7 @@ const AudioPlayer = (props) => {
   const play = () => {
     const audio = audioRef.current;
     audio.play();
-    audio.volume = 0.2;
+    audio.volume = 0.1;
     setIsPlaying(true);
   };
 
