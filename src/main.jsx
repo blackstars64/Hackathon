@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cadeaux from "./components/Cadeaux.jsx";
+import Error from "./components/Error.jsx";
 
 export const CalenderLoader = async () => {
   const reponse = await fetch("../../src/data/cadeaux.json", {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: "/cadeaux/:id",
     element: <Cadeaux />,
     loader: CalenderLoader,
+  },
+  {
+    path: "/*",
+    element: <Error />,
   },
 ]);
 
