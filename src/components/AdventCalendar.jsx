@@ -2,8 +2,11 @@ import "../css/AdventCalendar.css";
 import { Link } from "react-router-dom";
 import { useLocalStorage } from "usehooks-ts";
 import Porte from "../utils/Porte";
-
-
+import cibleCursor from "../../src/assets/images/cible-cursor.svg";
+import PropTypes from "prop-types";
+const cursorStyle = {
+  cursor: `url(${cibleCursor}), auto`,
+};
 const AdventCalendar = ({ data }) => {
   const [openedDoors, setOpenedDoors] = useLocalStorage("doors", []);
 
@@ -50,7 +53,18 @@ const AdventCalendar = ({ data }) => {
     return doors;
   };
 
-  return <div className="advent-calendar">{renderDoors()}</div>;
+  return (
+    <div style={cursorStyle}>
+      <div className="advent-calendar">{renderDoors()}</div>
+    </div>
+  );
 };
-
+AdventCalendar.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      objetimg: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 export default AdventCalendar;

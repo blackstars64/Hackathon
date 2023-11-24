@@ -3,6 +3,9 @@ import Confetti from "react-confetti";
 import { useLoaderData, useParams } from "react-router-dom";
 import "../css/Cadeaux.css";
 import { Link } from "react-router-dom";
+import Rire_Nelson from "../utils/Rire_Nelson";
+import traineau from "../../src/assets/images/traineau-noel.gif";
+
 function Cadeaux() {
   const data = useLoaderData();
   const { id } = useParams();
@@ -11,17 +14,14 @@ function Cadeaux() {
   const [isConfettiActive, setIsConfettiActive] = useState(false);
 
   useEffect(() => {
-    // Activer les confettis après un court délai (vous pouvez ajuster cela)
     const timeout = setTimeout(() => {
       setIsConfettiActive(true);
     }, 500);
 
-    // Désactiver les confettis après un certain temps (vous pouvez ajuster cela)
     const confettiTimeout = setTimeout(() => {
       setIsConfettiActive(false);
     }, 70000);
 
-    // Nettoyer les timeouts lors du démontage du composant
     return () => {
       clearTimeout(timeout);
       clearTimeout(confettiTimeout);
@@ -34,6 +34,7 @@ function Cadeaux() {
 
   return (
     <div className="screen">
+      <img className="cadeaux-traineau-noel" src={traineau} alt="traineau" />
       <div className="cadeau-container">
         {isConfettiActive && <Confetti />}
         <img className="cadeau-image" src={dataCadeaux[0].img} alt="" />
@@ -41,8 +42,8 @@ function Cadeaux() {
       <p className={dataCadeaux[0].text !== "" ? "text-data" : "no-text"}>
         {dataCadeaux[0].text}{" "}
       </p>
-      <p className="yeux"> 👀</p>
-      <Link className="return" to="/">
+
+      <Link className="return" to="/" onClick={Rire_Nelson}>
         Retour
       </Link>
     </div>
