@@ -72,10 +72,10 @@ canvas {
 }
 @keyframes neige {
   0% {
-    transform: translateY(-480%);
+    transform: translateY(-578%);
   }
   85% {
-    transform: translateY(-480%);
+    transform: translateY(-578%);
   }
   100% {
     transform: translateY(-239%);
