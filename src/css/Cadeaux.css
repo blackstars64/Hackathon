@@ -9,6 +9,21 @@
   align-items: center;
   cursor: url("../../src/assets/images/cible-cursor.svg") 14 0, auto;
 }
+.cadeaux-traineau-noel {
+  position: fixed;
+  z-index: 500;
+  animation: moveTwo 15s linear infinite;
+}
+@keyframes moveTwo {
+  0% {
+    transform: translate(1200px, 550px);
+  }
+
+  100% {
+    transform: translate(-2270px, -1200px);
+  }
+}
+
 .screen::after {
   content: url(../assets/images/neige-tr.png);
   position: absolute;

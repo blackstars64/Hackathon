@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import "../css/Cadeaux.css";
 import { Link } from "react-router-dom";
 import Rire_Nelson from "../utils/Rire_Nelson";
+import traineau from "../../src/assets/images/traineau-noel.gif";
 
 function Cadeaux() {
   const data = useLoaderData();
@@ -33,6 +34,7 @@ function Cadeaux() {
 
   return (
     <div className="screen">
+      <img className="cadeaux-traineau-noel" src={traineau} alt="traineau" />
       <div className="cadeau-container">
         {isConfettiActive && <Confetti />}
         <img className="cadeau-image" src={dataCadeaux[0].img} alt="" />

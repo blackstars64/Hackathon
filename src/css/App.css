@@ -44,14 +44,24 @@ body {
 .traineau-noel {
   position: fixed;
   z-index: 500;
-  animation: move 15s linear infinite;
+  animation: move 30s linear infinite;
 }
 @keyframes move {
   0% {
     transform: translate(1100px, 1200px);
   }
 
+  50% {
+    transform: translateX(-2000px);
+  }
+  53% {
+    transform: translate(-500px, -5000px);
+  }
+  55% {
+    transform: translate(1200px, -150px);
+  }
+
   100% {
-    transform: translateX(-1200px);
+    transform: translate(-1200px, 467px);
   }
 }
