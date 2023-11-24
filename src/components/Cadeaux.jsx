@@ -11,17 +11,14 @@ function Cadeaux() {
   const [isConfettiActive, setIsConfettiActive] = useState(false);
 
   useEffect(() => {
-    // Activer les confettis après un court délai (vous pouvez ajuster cela)
     const timeout = setTimeout(() => {
       setIsConfettiActive(true);
     }, 500);
 
-    // Désactiver les confettis après un certain temps (vous pouvez ajuster cela)
     const confettiTimeout = setTimeout(() => {
       setIsConfettiActive(false);
     }, 70000);
 
-    // Nettoyer les timeouts lors du démontage du composant
     return () => {
       clearTimeout(timeout);
       clearTimeout(confettiTimeout);
